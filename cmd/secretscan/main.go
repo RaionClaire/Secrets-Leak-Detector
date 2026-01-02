@@ -7,20 +7,20 @@ import (
 	"os"
 	"strings"
 
-	"github.com/yourname/secrets-leak-detector/internal/github"
-	"github.com/yourname/secrets-leak-detector/internal/scanner"
+	"github.com/raionclaire/secrets-leak-detector/internal/github"
+	"github.com/raionclaire/secrets-leak-detector/internal/scanner"
 )
 
 func main() {
 	var (
-		mode            = flag.String("mode", "repo", "scan mode: repo|pr")
-		path            = flag.String("path", ".", "path to scan (repo mode)")
-		configPath      = flag.String("config", ".secretscan.yml", "config file path")
-		ignorePath      = flag.String("ignore", ".secretsignore", "ignore file path")
-		format          = flag.String("format", "text", "output format: text|json")
-		failOnFindings  = flag.Bool("fail", true, "exit non-zero if secrets found")
-		commentOnPR     = flag.Bool("comment", true, "post PR comment when secrets found (pr mode)")
-		maxFindings     = flag.Int("max-findings", 50, "max findings before stop")
+		mode           = flag.String("mode", "repo", "scan mode: repo|pr")
+		path           = flag.String("path", ".", "path to scan (repo mode)")
+		configPath     = flag.String("config", ".secretscan.yml", "config file path")
+		ignorePath     = flag.String("ignore", ".secretsignore", "ignore file path")
+		format         = flag.String("format", "text", "output format: text|json")
+		failOnFindings = flag.Bool("fail", true, "exit non-zero if secrets found")
+		commentOnPR    = flag.Bool("comment", true, "post PR comment when secrets found (pr mode)")
+		maxFindings    = flag.Int("max-findings", 50, "max findings before stop")
 	)
 	flag.Parse()
 
