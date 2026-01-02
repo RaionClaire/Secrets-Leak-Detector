@@ -100,3 +100,6 @@ jobs:
 
 ## Forks and module path
 The module path is `github.com/raionclaire/secrets-leak-detector` (see `go.mod`). If you fork and publish under a different GitHub account, update the module path and imports to match your fork before distributing.
+
+## Support
+Email: chacastastaria@gmail.com
